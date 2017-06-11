@@ -13,12 +13,14 @@ if(!username){
   username = promptForUserName();
   userStore.set(username);
 }
+
+
 class ChatApp {
     constructor() {
         this.chatForm = new ChatForm(FORM_SELECTOR,INPUT_SELECTOR);
         this.chatList = new ChatList(LIST_SELECTOR,username);
 
-        socket.init('ws://http://qihao.mynetgear.com:12345');
+        socket.init('ws://qihao.mynetgear.com:12345');
         socket.registerOpenHandler(()=>{
           this.chatForm.init((data) =>{
             let message = new ChatMessage({'message':data});

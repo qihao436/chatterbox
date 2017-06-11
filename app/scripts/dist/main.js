@@ -44,7 +44,7 @@ var ChatApp = function ChatApp() {
   this.chatForm = new _dom.ChatForm(FORM_SELECTOR, INPUT_SELECTOR);
   this.chatList = new _dom.ChatList(LIST_SELECTOR, username);
 
-  _wsClient2.default.init('ws://192.168.1.15:3001');
+  _wsClient2.default.init('ws://qihao.mynetgear.com:12345:3001');
   _wsClient2.default.registerOpenHandler(function () {
     _this.chatForm.init(function (data) {
       var message = new ChatMessage({ 'message': data });
