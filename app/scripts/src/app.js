@@ -13,7 +13,7 @@ if(!username){
   username = promptForUserName();
   userStore.set(username);
 }
-
+//nihao
 username = promptForUserName();
 class ChatApp {
     constructor() {
