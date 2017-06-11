@@ -34,7 +34,6 @@ if (!username) {
   userStore.set(username);
 }
 
-username = (0, _dom.promptForUserName)();
 
 var ChatApp = function ChatApp() {
   var _this = this;
