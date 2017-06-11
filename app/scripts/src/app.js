@@ -20,7 +20,7 @@ class ChatApp {
         this.chatForm = new ChatForm(FORM_SELECTOR,INPUT_SELECTOR);
         this.chatList = new ChatList(LIST_SELECTOR,username);
 
-        socket.init('ws://localhost:3001');
+        socket.init('ws://192.168.1.15:3001');
         socket.registerOpenHandler(()=>{
           this.chatForm.init((data) =>{
             let message = new ChatMessage({'message':data});
